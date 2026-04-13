@@ -145,9 +145,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
                 AddComp<DetailExaminableComponent>(entity.Value).Content = profile.FlavorText;
             }
 
-            //Moffstation - Re-add Geras - Begin
-            RaiseLocalEvent(entity.Value, new GerasVisualInitEvent(profile));
-            //Moffstation - End
+            RaiseLocalEvent(entity.Value, new GerasVisualInitEvent(profile)); //Moffstation - Re-add Geras
         }
 
         if (loadout != null)
